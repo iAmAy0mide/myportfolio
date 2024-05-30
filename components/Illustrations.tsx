@@ -11,7 +11,7 @@ const Illustrations: React.FC<IllustrationProp> = ({ alt, height, width, src}) =
         height={height} 
         width={width} 
         src={src} 
-        className="-z-10 right-1 bottom-[8rem] smm:bottom-6 sm:bottom-1 absolute w-[30rem] md:bottom-1 md:right-10 md:w-[32rem] xl:w-[37rem] xl:right-2"
+        className="-z-10 right-1 bottom-[8rem] smm:bottom-6 sm:bottom-1 absolute w-[30rem] md:bottom-4 md:right-10 md:w-[32rem] xl:w-[37rem] xl:right-2"
       />
     </>
   )
@@ -23,5 +23,5 @@ interface IllustrationProp {
     alt: string;
     height?: number | `${number}` | undefined;
     width?: number | `${number}` | undefined;
-    src: string | StaticImport;
+    src: string | StaticImport | any;
 }
