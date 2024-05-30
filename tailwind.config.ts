@@ -15,7 +15,14 @@ const config: Config = {
       },
       colors: {
         textColor: "#FFF5EE"
-      }
+      },
+      screens: {
+        smm: "300px",
+        sm: "480px",
+        md: "768px",
+        lg: "976px",
+        xl: "1440px",
+      },
     },
   },
   plugins: [],
