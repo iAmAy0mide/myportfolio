@@ -1,10 +1,12 @@
+import Navigations from '@/components/Navigations'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <main className='main'>
+      <h1 className='slide-in-blurred-top'>About</h1>
+      <Navigations />
+    </main>
   )
 }
 
