@@ -28,7 +28,7 @@ const page = () => {
         <span className='absolute -z-10 right-[3rem] bottom-[2rem] text-stroke-tr text-[4rem] font-extrabold -rotate-45'>ME</span>
         <h1 className='slide-in-blurred-top text-center text-[3rem] text-textColor font-extrabold'>About Me</h1>
         <p className="">
-        I'm Ayomide, a full-stack developer driven by a passion for transforming ideas into digital reality. With a focus on both front-end finesse and back-end robustness, I thrive in the creative process of building intuitive, user-centric websites and applications.
+        I&apos;m Ayomide, a full-stack developer driven by a passion for transforming ideas into digital reality. With a focus on both front-end finesse and back-end robustness, I thrive in the creative process of building intuitive, user-centric websites and applications.
         </p>
       </div>
       <Navigations />
