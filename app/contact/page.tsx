@@ -1,11 +1,13 @@
 import React from 'react'
+import Navigations from '@/components/Navigations';
 
 const page = () => {
   return (
-    <div>
+    <main>
       <h1>Contact</h1>
-    </div>
+      <Navigations />
+    </main>
   )
 }
 
-export default page
+export default page;
