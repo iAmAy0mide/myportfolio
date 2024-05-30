@@ -2,6 +2,7 @@
 import Navigations from "@/components/Navigations";
 import Image from "next/image";
 import Innovation from "/public/innovation.svg";
+import Illustrations from "@/components/Illustrations";
 
 function Home() {
 
@@ -17,13 +18,12 @@ function Home() {
       </div>
 
       <Navigations />
-      <Image 
+      <Illustrations  
         alt="image showcasing innovation"
         height={undefined} 
         width={undefined} 
         src={Innovation} 
-        className="-z-10 right-1 bottom-[8rem] smm:bottom-6 sm:bottom-1 absolute w-[30rem] md:bottom-1 md:right-10 md:w-[32rem] xl:w-[37rem] xl:right-2"
-      />
+       />
     </main>
   )
 }
