@@ -5,7 +5,12 @@
 body {
   background: #29353f;
   color: #FFF5EE;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* overflow: hidden; */
   /* color: #F0FFFF; */
 }
 
@@ -26,12 +31,11 @@ body {
 }
 
 .tilt-in-fwd-tl {
-  -webkit-animation:tilt-in-fwd-tl .9s 
-  cubic-bezier(.25,.46,.45,.94) both;animation:tilt-in-fwd-tl .9s 
-  cubic-bezier(.25,.46,.45,.94) both
+  -webkit-animation:tilt-in-fwd-tl .9s cubic-bezier(.25,.46,.45,.94) both;
+  animation:tilt-in-fwd-tl .9s  cubic-bezier(.25,.46,.45,.94) both
 }
 .text-stroke-tr {
-  -webkit-text-stroke: 2px rgb(237, 216, 238, .02); /* Red stroke with 50% opacity */
+  -webkit-text-stroke: 2px rgb(237, 216, 238, .04);
   color: transparent;
 }
 
