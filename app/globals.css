@@ -13,6 +13,10 @@ body {
   /* overflow: hidden; */
   /* color: #F0FFFF; */
 }
+.glassy {
+  background: rgb(41, 53, 63, .3);
+  backdrop-filter: blur(4px);
+}
 
 .light-up {
   backdrop-filter: blur(1px);
