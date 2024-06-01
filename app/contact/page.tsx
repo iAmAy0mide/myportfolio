@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Navigations from '@/components/Navigations';
 import whasapp from "/public/whatsapp-svg.svg";
 import linkedin from "/public/linkedin-svg.svg";
+import rocket from "/public/rocket-cut.png";
 
 const page = () => {
   const [errorMessage, setErrorMessage] = React.useState<string>();
@@ -11,7 +12,7 @@ const page = () => {
     lastName: '',
     firstName: '',
     subject: '',
-    description: ''
+    description: '',
   });
 
   const handleInputChange = (
@@ -30,7 +31,7 @@ const page = () => {
   }
 
   return (
-    <main className=' px-4 md:px-16 mx-auto flex flex-col justify-center min-h-screen'>
+    <main className='select-none px-4 md:px-16 mx-auto flex flex-col justify-center min-h-screen'>
       <h1>You Can Reach out to me here :) </h1>
       <form onSubmit={handleSubmit} className='flex flex-col min-w-[400px] p-[2rem] '>
       {/* <form onSubmit={handleSubmit} className='flex flex-col w-full'> */}
@@ -104,10 +105,29 @@ const page = () => {
             />
           </div> */}
         </div>
-        <div>
-          <button type="submit">
-            Send
-          </button>
+        <div className="flex justify-between mt-2">
+          <div className="relative">
+            <button 
+              type="submit" 
+              className='btn-skeumorphic pl-4 pr-14 py-2 bg-slate-500 relative text-textColor'>
+              Shoot
+              <Image 
+              alt='rocket icon shoot'
+              height={undefined}
+              width={undefined}
+              src={rocket}
+              className='absolute w-6 rocket -top-1 right-3 '
+            />
+            </button>
+            {/* <Image 
+              alt='rocket icon shoot'
+              height={undefined}
+              width={undefined}
+              src={rocket}
+              className='absolute w-6'
+            /> */}
+          </div>
+          <div className='flex'> 
           <Image 
             alt='whatsapp icon'
             height={undefined}
@@ -120,8 +140,10 @@ const page = () => {
           height={undefined}
           width={undefined}
           src={linkedin}
-          className='w-4'
+          className='w-6'
           />
+          </div>
+         
         </div>
        
       </form>
