@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Navigations from '@/components/Navigations';
+import whasapp from "/public/whatsapp-svg.svg";
+import linkedin from "/public/linkedin-svg.svg";
 
 const page = () => {
   const [errorMessage, setErrorMessage] = React.useState<string>();
@@ -106,8 +108,20 @@ const page = () => {
           <button type="submit">
             Send
           </button>
-          <Image />
-          <Image />
+          <Image 
+            alt='whatsapp icon'
+            height={undefined}
+            width={undefined}
+            src={whasapp}
+            className='w-6'
+          />
+          <Image 
+          alt='linked in icon '
+          height={undefined}
+          width={undefined}
+          src={linkedin}
+          className='w-4'
+          />
         </div>
        
       </form>
