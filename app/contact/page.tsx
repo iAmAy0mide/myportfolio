@@ -28,6 +28,7 @@ const page = () => {
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
+    console.log(userInputs)
   }
 
   return (
@@ -43,8 +44,8 @@ const page = () => {
               >FirstName</label>
             <input 
               type="text" 
-              name="firstname"
-              id="firstname" 
+              name="firstName"
+              id="firstName" 
               placeholder='FirstName'
               value={userInputs.firstName}
               onChange={handleInputChange}
@@ -84,8 +85,8 @@ const page = () => {
           <div className="flex flex-col">
             <label htmlFor="description">Description:</label>          
             <textarea 
-              name="message" 
-              id="message" 
+              name="description" 
+              id="description" 
               placeholder='Please tell us more...'
               value={userInputs.description}
               onChange={handleInputChange}
