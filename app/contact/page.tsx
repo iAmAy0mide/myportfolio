@@ -6,7 +6,7 @@ import whasapp from "/public/whatsapp-svg.svg";
 import linkedin from "/public/linkedin-svg.svg";
 import rocket from "/public/rocket-cut.png";
 
-const page = () => {
+const Contact = () => {
   const [errorMessage, setErrorMessage] = React.useState<string>();
   const [userInputs, setUserInputs] = React.useState<IFormData>({
     lastName: '',
@@ -107,7 +107,7 @@ const page = () => {
           </div> */}
         </div>
         <div className="flex justify-between mt-2">
-          <div className="relative">
+          <div className="relative ">
             <button 
               type="submit" 
               className='btn-skeumorphic pl-4 pr-14 py-2 bg-slate-500 relative text-textColor'>
@@ -117,7 +117,7 @@ const page = () => {
               height={undefined}
               width={undefined}
               src={rocket}
-              className='absolute w-6 rocket -top-1 right-3 '
+              className='absolute w-6 rocket -top-1 right-3 rocket transition-all duration-300'
             />
             </button>
             {/* <Image 
@@ -129,22 +129,26 @@ const page = () => {
             /> */}
           </div>
           <div className='flex'> 
-          <Image 
-            alt='whatsapp icon'
-            height={undefined}
-            width={undefined}
-            src={whasapp}
-            className='w-6'
-          />
-          <Image 
-          alt='linked in icon '
-          height={undefined}
-          width={undefined}
-          src={linkedin}
-          className='w-6'
-          />
+          
+          <div className="bg-bgColor">
+            <Image 
+              alt='whatsapp icon'
+              height={undefined}
+              width={undefined}
+              src={whasapp}
+              className='w-6'
+            />
           </div>
-         
+          <div className="bg-bgColor">
+            <Image 
+              alt='linked in icon '
+              height={undefined}
+              width={undefined}
+              src={linkedin}
+              className='w-6'
+            />
+          </div>         
+          </div>         
         </div>
        
       </form>
@@ -153,7 +157,7 @@ const page = () => {
   )
 }
 
-export default page;
+export default Contact;
 
 
 interface IFormData {

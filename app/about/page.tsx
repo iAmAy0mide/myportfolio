@@ -2,7 +2,7 @@ import Illustrations from '@/components/Illustrations';
 import Navigations from '@/components/Navigations';
 import AboutIllus from "/public/about.svg";
 
-const page = () => {
+const About = () => {
   return (
     <main className='flex flex-col px-4 md:px-16 md:justify-start md:items-end animated slide-in-blurred-top'>
         <span className='absolute text-stroke-tr -z-10 left-[10%] top-[8%] text-[4rem] font-extrabold rotate-45'>ME</span>
@@ -33,4 +33,4 @@ const page = () => {
   )
 }
 
-export default page;
+export default About;
