@@ -4,7 +4,7 @@ import AboutIllus from "/public/about.svg";
 
 const page = () => {
   return (
-    <main className='flex flex-col px-4 md:px-16 md:justify-start md:items-end'>
+    <main className='flex flex-col px-4 md:px-16 md:justify-start md:items-end animated slide-in-blurred-top'>
         <span className='absolute text-stroke-tr -z-10 left-[10%] top-[8%] text-[4rem] font-extrabold rotate-45'>ME</span>
         <span className='absolute text-stroke-tr -z-10 left-[23%] top-[15%] text-[4rem] font-extrabold rotate-45'>ME</span>
         <span className='absolute -z-10 top-[13%%] hidden md:block right-[20%] text-stroke-tr text-[4rem] font-extrabold -rotate-45'>ME</span>
