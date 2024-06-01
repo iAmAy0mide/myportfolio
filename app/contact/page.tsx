@@ -73,7 +73,7 @@ const page = () => {
               type="text" 
               name="subject" 
               id="subject" 
-              placeholder='We can make this brief, right?'
+              placeholder='Subject'
               value={userInputs.subject}
               onChange={handleInputChange} 
               className='flicker-1mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
