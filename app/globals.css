@@ -50,6 +50,10 @@ body {
   /* filter: brightness(120%) blur(-3px); */
 }
 
+.btn-skeumorphic:hover .rocket {
+  filter: brightness(120%);
+}
+
 .text-stroke-tr {
   -webkit-text-stroke: 2px rgb(237, 216, 238, .04);
   color: transparent;
