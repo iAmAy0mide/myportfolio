@@ -7,7 +7,7 @@ import Illustrations from "@/components/Illustrations";
 function Home() {
 
   return (
-    <main className="tilt-in-fwd-tl">
+    <main className="tilt-in-fwd-tl mx-auto">
       <div className="text-center pt-[3rem]  md:pt-[4rem] z-10">
         <h1 className="text-[3rem] text-textColor font-extrabold neumorphic">Ayomide Enirayetan</h1>
         <h2 className="text-[1.4rem] text-textColor">Full Stack Web Developer</h2>
