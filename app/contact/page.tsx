@@ -12,6 +12,7 @@ const Contact = () => {
   const [userInputs, setUserInputs] = React.useState<IFormData>({
     lastName: '',
     firstName: '',
+    email: '',
     subject: '',
     description: '',
   });
@@ -34,7 +35,7 @@ const Contact = () => {
 
   return (
     <main className='select-none sm:px-4 md:px-16 mx-auto flex flex-col 
-    md:mt-[8rem]'>
+    md:mt-[6rem]'>
       {/* <h1>You Can Reach Out To Me Here :) </h1> */}
       <form onSubmit={handleSubmit} className='flex flex-col  p-[2rem]'>
         <div className="flex flex-col md:flex-row gap-4">
@@ -67,7 +68,22 @@ const Contact = () => {
               />
             </div>
           </div>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row  md:gap-4 justify-center md:items-center ">          
+          <div className='flex flex-col  mt-4 md:my-4'>
+            <label 
+              htmlFor="Subject"
+              className='mb-2'
+              >Email:</label>
+            <input 
+              type="email" 
+              name="email" 
+              id="email" 
+              placeholder='adam@example.com'
+              value={userInputs.email}
+              onChange={handleInputChange} 
+              className=' p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
+              />
+          </div>
           <div className='flex flex-col my-4'>
             <label 
               htmlFor="Subject"
@@ -124,10 +140,13 @@ const Contact = () => {
             />
             </button>
           </div>
-          <div className='flex'> 
+          <div className='flex gap-1'> 
           
-          <div className="bg-bgColor">
-            <Link href="/">
+          <div className="bg-bgColor brightness-90 w-10 h-10 rounded-full flex justify-center items-center relative social-icon-container hover:brightness-125 transition-all duration-700 cursor-pointer">
+            <Link 
+              href="/"
+              className='z-20'
+            >
             <Image 
               alt='whatsapp icon'
               height={undefined}
@@ -135,18 +154,23 @@ const Contact = () => {
               src={whasapp}
               className='w-6'
             />
-            </Link>            
+            </Link> 
+            <div className="social-icon-overlay"></div>    
           </div>
-          <div className="bg-bgColor">
-            <Link href="#">
+          <div className="bg-bgColor brightness-90 w-10 h-10 rounded-full flex justify-center items-center relative social-icon-container hover:brightness-125 transition-all duration-700 cursor-pointer">
+            <Link 
+              href="#"
+              className='z-20'
+              >
               <Image 
-                alt='linked in icon '
+                alt='linked in icon'
                 height={undefined}
                 width={undefined}
                 src={linkedin}
-                className='w-6'
+                className='w-6 brightness-105'
               />
-            </Link>            
+            </Link> 
+            <div className="social-icon-two-overlay"></div>           
           </div>         
           </div>         
         </div>       
@@ -162,6 +186,7 @@ export default Contact;
 interface IFormData {
   firstName: string;
   lastName: string;
+  email: string;
   subject: string;
   description: string;
 }
