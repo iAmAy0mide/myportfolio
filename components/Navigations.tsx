@@ -7,7 +7,7 @@ const Navigations = () => {
     const pathname = usePathname();
 
   return (
-    <nav  className="absolute text-white bottom-10 left-4 md:left-16 z-10">
+    <nav  className="fixed text-white bottom-10 left-4 md:left-16 z-10">
       <div>
         <Link 
           href="/" 
@@ -27,7 +27,7 @@ const Navigations = () => {
           <Link 
           href="/skills" 
           className={`block text-textColor text-[1.2rem] py-2 hover:px-2 light-up hover:pl-2 transition-all duration-500 ${pathname === "/skills" ? 'inner-shadow pl-2' : '' }`}
-          >Skills</Link>
+          >Techs</Link>
           <div className="h-[2px] w-[5.5rem] bg-textColor"></div>
         </div>
         <div>
