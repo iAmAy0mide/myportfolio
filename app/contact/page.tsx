@@ -8,7 +8,13 @@ import rocket from "/public/rocket-cut.png";
 import Link from 'next/link';
 
 const Contact = () => {
-  const [errorMessage, setErrorMessage] = React.useState<string>();
+  const [error, setError] = React.useState<IErrorInputs>({
+    lastName: '',
+    firstName: '',
+    email: '',
+    subject: '',
+    description: '',
+  });
   const [userInputs, setUserInputs] = React.useState<IFormData>({
     lastName: '',
     firstName: '',
@@ -29,8 +35,18 @@ const Contact = () => {
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
+    console.log(userInputs);
 
-    console.log(userInputs)
+    const { lastName, firstName, email, subject, description} = userInputs;
+
+    if (lastName == '') {
+      setError((prev) => ({
+        ...prev,
+        lastName: 'Please fill out this field.'
+      }));
+      return
+    }
+    
   }
 
   return (
@@ -53,6 +69,7 @@ const Contact = () => {
               onChange={handleInputChange}
               className=' mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
             />
+            <p>{error.firstName}</p>
           </div>
             <div className='flex flex-col'>
               <label 
@@ -66,6 +83,7 @@ const Contact = () => {
                 onChange={handleInputChange}
                 className='mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
               />
+              <p>{error.lastName}</p>
             </div>
           </div>
         <div className="flex flex-col md:flex-row  md:gap-4 justify-center md:items-center ">          
@@ -83,6 +101,7 @@ const Contact = () => {
               onChange={handleInputChange} 
               className=' p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
               />
+              <p className='text-red-500 font-sans font-medium'>{error.email}</p>
           </div>
           <div className='flex flex-col my-4'>
             <label 
@@ -98,6 +117,7 @@ const Contact = () => {
               onChange={handleInputChange} 
               className=' p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
               />
+            <p className='text-red-500 font-sans font-medium'>{error.subject}</p>
           </div>
         </div>
         <div className='flex flex-col'>
@@ -113,6 +133,7 @@ const Contact = () => {
               cols={30}
               className='mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none resize-none overflow-auto'
             ></textarea>
+            <p className='text-red-500 font-sans font-medium'>{error.description}</p>
           </div>
           {/* <div className="flex flex-col">
             <label htmlFor="danger">DANGER!</label>
@@ -182,11 +203,19 @@ const Contact = () => {
 
 export default Contact;
 
+// interface IErrorInputs {
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+//   subject: string;
+//   description: string;
+// }
 
-interface IFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  subject: string;
-  description: string;
-}
+// interface IFormData {
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+//   subject: string;
+//   description: string;
+// };
+
