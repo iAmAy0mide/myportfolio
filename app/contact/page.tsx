@@ -5,6 +5,7 @@ import Navigations from '@/components/Navigations';
 import whasapp from "/public/whatsapp-svg.svg";
 import linkedin from "/public/linkedin-svg.svg";
 import rocket from "/public/rocket-cut.png";
+import Link from 'next/link';
 
 const Contact = () => {
   const [errorMessage, setErrorMessage] = React.useState<string>();
@@ -32,16 +33,16 @@ const Contact = () => {
   }
 
   return (
-    <main className='select-none px-4 md:px-16 mx-auto flex flex-col justify-center min-h-screen'>
-      <h1>You Can Reach out to me here :) </h1>
-      <form onSubmit={handleSubmit} className='flex flex-col min-w-[400px] p-[2rem] '>
-      {/* <form onSubmit={handleSubmit} className='flex flex-col w-full'> */}
+    <main className='select-none sm:px-4 md:px-16 mx-auto flex flex-col 
+    md:mt-[8rem]'>
+      {/* <h1>You Can Reach Out To Me Here :) </h1> */}
+      <form onSubmit={handleSubmit} className='flex flex-col  p-[2rem]'>
         <div className="flex flex-col md:flex-row gap-4">
           <div className='flex flex-col'>
             <label 
               htmlFor="firstName"
               className='font-medium'
-              >FirstName</label>
+              >FirstName:</label>
             <input 
               type="text" 
               name="firstName"
@@ -59,7 +60,7 @@ const Contact = () => {
                 type="text" 
                 name="lastName" 
                 id="lastName" 
-                placeholder='lastName'
+                placeholder='LastName'
                 value={userInputs.lastName}
                 onChange={handleInputChange}
                 className='mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
@@ -69,7 +70,9 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row">
           <div className='flex flex-col my-4'>
             <label 
-              htmlFor="Subject">Subject</label>
+              htmlFor="Subject"
+              className='mb-2'
+              >Subject:</label>
             <input 
               type="text" 
               name="subject" 
@@ -77,7 +80,7 @@ const Contact = () => {
               placeholder='Subject'
               value={userInputs.subject}
               onChange={handleInputChange} 
-              className='flicker-1mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
+              className=' p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
               />
           </div>
         </div>
@@ -106,7 +109,7 @@ const Contact = () => {
             />
           </div> */}
         </div>
-        <div className="flex justify-between mt-2">
+        <div className="flex justify-between mt-2 items-center">
           <div className="relative ">
             <button 
               type="submit" 
@@ -120,17 +123,11 @@ const Contact = () => {
               className='absolute w-6 rocket -top-1 right-3 rocket transition-all duration-300'
             />
             </button>
-            {/* <Image 
-              alt='rocket icon shoot'
-              height={undefined}
-              width={undefined}
-              src={rocket}
-              className='absolute w-6'
-            /> */}
           </div>
           <div className='flex'> 
           
           <div className="bg-bgColor">
+            <Link href="/">
             <Image 
               alt='whatsapp icon'
               height={undefined}
@@ -138,19 +135,21 @@ const Contact = () => {
               src={whasapp}
               className='w-6'
             />
+            </Link>            
           </div>
           <div className="bg-bgColor">
-            <Image 
-              alt='linked in icon '
-              height={undefined}
-              width={undefined}
-              src={linkedin}
-              className='w-6'
-            />
+            <Link href="#">
+              <Image 
+                alt='linked in icon '
+                height={undefined}
+                width={undefined}
+                src={linkedin}
+                className='w-6'
+              />
+            </Link>            
           </div>         
           </div>         
-        </div>
-       
+        </div>       
       </form>
       <Navigations />
     </main>
