@@ -18,11 +18,3 @@ const Illustrations: React.FC<IllustrationProp> = ({ alt, height, width, src, cl
 }
 
 export default Illustrations;
-
-interface IllustrationProp {
-    alt: string;
-    height?: number | `${number}` | undefined;
-    width?: number | `${number}` | undefined;
-    src: string | StaticImport | any;
-    className: string;
-}
