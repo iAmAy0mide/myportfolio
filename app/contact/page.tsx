@@ -214,10 +214,10 @@ const Contact = () => {
                 height={undefined}
                 width={undefined}
                 src={linkedin}
-                className='w-6 brightness-105'
+                className='w-6'
               />
             </Link> 
-            <div className="social-icon-two-overlay"></div>           
+            <div className="social-icon-two-overlay"></div>          
           </div>         
           </div>         
         </div>       
