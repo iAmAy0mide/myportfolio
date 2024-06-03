@@ -31,6 +31,18 @@ const Contact = () => {
       ...prevState,
       [name]: value
     }));
+
+    const removeErrorMessageOnFieldFilled = (userInputs: IFormData) => {
+      for (const key in userInputs) {
+        if (userInputs[key as keyof IFormData] !== '') {
+          setError(prevState => ({
+            ...prevState,
+            [key]: ''
+          }));
+        }
+      }
+    }
+    removeErrorMessageOnFieldFilled(userInputs);
   }
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
@@ -39,14 +51,26 @@ const Contact = () => {
 
     const { lastName, firstName, email, subject, description} = userInputs;
 
-    if (lastName == '') {
-      setError((prev) => ({
-        ...prev,
-        lastName: 'Please fill out this field.'
-      }));
-      return
+    const notifyEmptyField = (userInputs: IFormData) => {
+      for (const key in userInputs) {
+        if (userInputs[key as keyof IFormData] === '') {
+          setError(prevState => ({
+            ...prevState,
+            [key]: 'Please fill out this field.'
+          }))
+        }
+      }
+      if (
+        lastName === '' 
+        || firstName === '' 
+        || email === '' 
+        || subject === '' 
+        || description  === '') {
+        return
+      }
     }
-    
+
+    notifyEmptyField(userInputs);    
   }
 
   return (
@@ -69,24 +93,24 @@ const Contact = () => {
               onChange={handleInputChange}
               className=' mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
             />
-            <p>{error.firstName}</p>
+            <p className='text-red-500 font-sans font-medium'>{error.firstName}</p>
           </div>
-            <div className='flex flex-col'>
-              <label 
-                htmlFor="lastName">LastName:</label>
-              <input 
-                type="text" 
-                name="lastName" 
-                id="lastName" 
-                placeholder='LastName'
-                value={userInputs.lastName}
-                onChange={handleInputChange}
-                className='mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
-              />
-              <p>{error.lastName}</p>
-            </div>
+          <div className='flex flex-col'>
+            <label 
+              htmlFor="lastName">LastName:</label>
+            <input 
+              type="text" 
+              name="lastName" 
+              id="lastName" 
+              placeholder='LastName'
+              value={userInputs.lastName}
+              onChange={handleInputChange}
+              className='mt-2 p-4 hover:brightness-125 transition-all duration-300 placeholder:text-red-400 bg-slate-600 input-shadow outline-none'
+            />
+            <p className='text-red-500 font-sans font-medium'>{error.lastName}</p>
           </div>
-        <div className="flex flex-col md:flex-row  md:gap-4 justify-center md:items-center ">          
+        </div>
+        <div className="flex flex-col md:flex-row gap-4 ">          
           <div className='flex flex-col  mt-4 md:my-4'>
             <label 
               htmlFor="Subject"
@@ -103,7 +127,7 @@ const Contact = () => {
               />
               <p className='text-red-500 font-sans font-medium'>{error.email}</p>
           </div>
-          <div className='flex flex-col my-4'>
+          <div className='flex flex-col mb-4 md:my-4'>
             <label 
               htmlFor="Subject"
               className='mb-2'
@@ -165,7 +189,8 @@ const Contact = () => {
           
           <div className="bg-bgColor brightness-90 w-10 h-10 rounded-full flex justify-center items-center relative social-icon-container hover:brightness-125 transition-all duration-700 cursor-pointer">
             <Link 
-              href="/"
+              href="https://wa.me/message/SSATU4QNQEBWK1"
+              target='_blank'
               className='z-20'
             >
             <Image 
