@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Navigations from '@/components/Navigations';
 
-const page = () => {
+const Projects = () => {
   return (
-    <div>
-      <h1>Project</h1>
-    </div>
+    <main>
+      <div className="flex justify-between">
+
+      </div>
+      <div className="flex">
+        
+      </div>
+      <Navigations />
+    </main>
   )
 }
 
-export default page
+export default Projects
