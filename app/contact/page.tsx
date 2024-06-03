@@ -77,6 +77,7 @@ const Contact = () => {
     <main className='select-none sm:px-4 md:px-16 mx-auto flex flex-col 
     md:mt-[6rem]'>
       {/* <h1>You Can Reach Out To Me Here :) </h1> */}
+      <h1 className='text-textColor text-[3rem] font-mono mx-auto'>Let&apos;s Talk.</h1>
       <form onSubmit={handleSubmit} className='flex flex-col  p-[2rem]'>
         <div className="flex flex-col md:flex-row gap-4">
           <div className='flex flex-col'>
@@ -227,20 +228,3 @@ const Contact = () => {
 }
 
 export default Contact;
-
-// interface IErrorInputs {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   subject: string;
-//   description: string;
-// }
-
-// interface IFormData {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   subject: string;
-//   description: string;
-// };
-
