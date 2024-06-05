@@ -1,12 +1,16 @@
+"use client"
 import React from 'react';
 import Navigations from '@/components/Navigations';
 import Image from 'next/image';
 import proto from "/public/proto.png";
 import Bashorun from "/public/bashorun.png";
+import ProjectModal from '@/components/ProjectModal';
 // import Project from '@/components/Project';
 
 
 const Projects = () => {
+  const [modalIsOpen, setModalIsOpen] = React.useState<boolean>(false);
+
   return (
     <main>
       <div className="flex justify-between flex-col md:flex-row md mt-4 ml-4 gap-4">
@@ -36,14 +40,15 @@ const Projects = () => {
         <h1>Bashorunolu Legal Website</h1>
         <p></p>
         <button 
-          type="submit" 
+          onClick={() => setModalIsOpen(true)}
           className='btn-skeumorphic px-4 py-2 bg-slate-500 relative text-textColor'>
           Preview
         </button>
+        <ProjectModal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} />
        </div>
 
       </div>
-      <Navigations />
+      <Navigations isModal={true} />
     </main>
   )
 }
