@@ -30,3 +30,12 @@ declare type IProjectData = {
     projectName: string;
     description: string;
 }
+
+declare type IProjectModal = {
+    isOpen: boolean;
+    onRequestClose: () => void;
+}
+
+declare type INav = {
+    isModal?: boolean;
+}
