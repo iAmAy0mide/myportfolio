@@ -7,7 +7,7 @@ const Navigations: React.FC<INav> = ({ isModal }) => {
     const pathname = usePathname();
 
   return (
-    <nav  className={`fixed text-white bottom-10 left-4 md:left-16 ${isModal ? '-z-10' : 'z-10'}`}>
+    <nav  className={`fixed text-white bottom-10 left-4 md:left-16 ${isModal ? '-z-10' : 'z-30'}`}>
       <div>
         <Link 
           href="/" 
