@@ -163,30 +163,21 @@ body {
   justify-content: center;
 }
 
-/* .phone-container { 
-  position: relative;
-  width: 80%;
-  height: 90%;
-} */
-
-/* .carousel-container {
-  position: absolute;
-  bottom: 10px;
-  width: 70%; 
-  height: 80%;
-  z-index: 2;
-} */
-
-/* .carousel-container {
-  position: absolute;
-  top: 10%; 
-  left: 15%; 
-  width: 70%;
-  height: 80%; 
-  z-index: 2;
-} */
-
 .slick-slide img {
   width: 100%;
   height: auto;
+}
+
+
+.shelf-container {
+  box-shadow: inset 1px 1px 3px 18px #ecd4ec4f,
+             -2px 3px 3px #121111,
+              /* inset -14px -4px 2px  #121111, */
+              /* inset 14px 4px 2px  #121111, */
+              inset 0px -2px 0px 12px #121111;
+}
+
+.shelf {
+  /* background: linear-gradient(145deg, #ECD4EC, #D3B0D3); */
+  box-shadow: 8px 8px 9px #121111;
 }
