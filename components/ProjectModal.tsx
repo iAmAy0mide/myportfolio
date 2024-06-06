@@ -22,6 +22,8 @@ const customStyles = {
   }
 }
 
+const featuredPages = [contact, home, nav];
+
 // Modal.setAppElement('#App');
 
 const ProjectModal: React.FC<IProjectModal> = ({ isOpen, onRequestClose }) => {
@@ -44,7 +46,15 @@ const ProjectModal: React.FC<IProjectModal> = ({ isOpen, onRequestClose }) => {
         <div className="carousel-container h-[30rem] w-[16rem] bg-slate-300 relative overflow-hidden rounded-3xl z-30">
           {/* <span className="absolute bg-red-700 w-10 h-10 -top-2 z-20 ">X</span> */}
           <Slider {...settings} className='h-full bg-black overflow-hidden select-none cursor-grabbing pb-8'>
-            <div className='h-[120%] select-none'>
+            {featuredPages.map((image, index) => (
+              <div className='h-[120%] select-none' key={index}>
+              <Image 
+                height={undefined} 
+                width={undefined} 
+                src={image} alt="Image 1" />
+            </div>
+            ))}
+            {/* <div className='h-[120%] select-none'>
               <Image 
                 height={undefined} 
                 width={undefined} 
@@ -61,7 +71,7 @@ const ProjectModal: React.FC<IProjectModal> = ({ isOpen, onRequestClose }) => {
                 height={undefined} 
                 width={undefined} 
                 src={contact} alt="Image 1" />
-            </div>
+            </div> */}
           </Slider>
         </div>
     </Modal>

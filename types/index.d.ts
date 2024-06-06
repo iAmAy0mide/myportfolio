@@ -24,9 +24,9 @@ declare type IFormData = {
 
 declare type IProjectData = {
     alt: string;
-    height?: number | `${number}` | undefined;
-    width?: number | `${number}` | undefined;
-    src: string;
+    logoAlt: string;
+    src: string | StaticImport;
+    logoSrc: string | StaticImport;
     projectName: string;
     description: string;
 }
