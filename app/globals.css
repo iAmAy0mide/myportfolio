@@ -129,6 +129,10 @@ body {
   -webkit-text-stroke: 2px rgb(237, 216, 238, .04);
   color: transparent;
 }
+.my-stacks {
+  -webkit-text-stroke: 1px #FFF5EE;
+  color: transparent;
+}
 
 .rocket {
   transform: rotate(55deg);
