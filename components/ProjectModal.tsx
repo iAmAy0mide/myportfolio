@@ -51,7 +51,7 @@ const ProjectModal: React.FC<IProjectModal> = ({ isOpen, onRequestClose }) => {
               <Image 
                 height={undefined} 
                 width={undefined} 
-                src={image} alt="Image 1" />
+                src={image} alt={`featured image ${index}`} />
             </div>
             ))}
             {/* <div className='h-[120%] select-none'>
