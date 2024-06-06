@@ -110,6 +110,21 @@ body {
   background: #775087;
 }
 
+.image-3d {
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 8px #ccc,
+              0px 0px 0px transparent,
+              inset -1px -1px 3px #ccc
+  ;
+}
+.image-3d-ex {
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 2px #ccc,
+              0px 0px 0px transparent,
+              inset -1px -1px 3px #ccc
+  ;
+}
+
 .text-stroke-tr {
   -webkit-text-stroke: 2px rgb(237, 216, 238, .04);
   color: transparent;
@@ -132,8 +147,6 @@ body {
                /* 1px 10px 1px #909BA0; */
   /* text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.7), -3px -3px 8px rgba(0, 0, 0, 0.2); */
 }
-
-/* styles/globals.css or styles/modal.css */
 
 .modal {
   position: relative;
@@ -179,5 +192,5 @@ body {
 
 .shelf {
   /* background: linear-gradient(145deg, #ECD4EC, #D3B0D3); */
-  box-shadow: 8px 8px 9px #121111;
+  /* box-shadow: 8px 8px 9px #121111; */
 }
