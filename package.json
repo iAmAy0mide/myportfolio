@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.2.3",
     "@types/react-router-dom": "^5.3.3",
     "framer-motion": "^11.2.10",
     "next": "14.2.3",
