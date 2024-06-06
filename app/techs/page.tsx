@@ -23,6 +23,7 @@ const dancingScript = Dancing_Script({
 const Techs = () => {
   return (
     <main className='flex justify-center items-center relative h-[80vh] w-screen'>
+      <h1 className="absolute top-6 left-4 text-[2rem] font-extrabold my-stacks">My Stacks</h1>
       <div className="absolute top-4 right-4">
         <p><span className={`font-500 text-underline ${dancingScript.className}`}>Created with: </span><span className='text-underline text-[#ff9900e0] hover:text-[#ff9800] transition-colors duration-500 '>tailwind css</span></p>
         <p><span className={`font-500 ${dancingScript.className}`}>Inspired by: </span>
@@ -37,17 +38,18 @@ const Techs = () => {
         
         <div className=" absolute -top-[1.5rem] -left-[3.4rem] w-[6rem] sm:-top-4 sm:-left-[8.3rem] sm:w-[12rem]">
           <div className="flex gap-4 sm:pl-6">
-            <div className="w-10">
+            <div className="w-10 relative">
               <Image 
-                alt='a 3D icon of javascript programming language'
+                alt='a 3D icon of nodejs runtime'
                 width={undefined}
                 height={undefined}
                 src={nodejs}
               />
+              <div className="absolute"></div>
             </div>
             <div className="w-10 relative overflow-hidden">
               <Image 
-                alt='a 3D icon of typescript programming language'
+                alt='a 3D icon of expressjs framework - a framework for nodejs'
                 width={undefined}
                 height={undefined}
                 src={express}
@@ -63,7 +65,7 @@ const Techs = () => {
         <div className="absolute top-[1.7rem] -left-[2.7rem] w-[7rem] sm:top-[3rem] sm:w-[10rem] sm:-left-16">
           <div className="w-10 relative sm:ml-4">
             <Image 
-              alt=''
+              alt='a 3D icon of typescript programming language'
               width={undefined}
               height={undefined}
               src={ts}
@@ -77,7 +79,7 @@ const Techs = () => {
             <div className="flex items-end">
               <div className="w-10">
                 <Image 
-                  alt=''
+                  alt='a 3D icon of javascript programming language'
                   width={undefined}
                   height={undefined}
                   src={js}
@@ -85,7 +87,7 @@ const Techs = () => {
               </div>
               <div className="w-10">
                 <Image 
-                  alt=''
+                  alt='a 3D icon of reactjs - a javascript library'
                   width={undefined}
                   height={undefined}
                   src={react}
@@ -94,7 +96,7 @@ const Techs = () => {
             </div>
             <div className="w-10">
             <Image 
-              alt=''
+              alt='a 3D icon of nextjs - a reactjs framework'
               width={undefined}
               height={undefined}
               src={nextjs}
@@ -108,7 +110,7 @@ const Techs = () => {
           <div className="flex justify-between sm:pl-4">
             <div className="w-10 relative">
               <Image 
-                alt=''
+                alt='a 3D icon of sanity.io - content management system'
                 width={undefined}
                 height={undefined}
                 src={sanity}
@@ -119,7 +121,7 @@ const Techs = () => {
             <div className="flex sm:-mr-4">
               <div className="w-10">
                 <Image 
-                  alt=''
+                  alt='a 3D icon of tailwind css - provide sets of utility classes fro CSS'
                   width={undefined}
                   height={undefined}
                   src={tailwind}
@@ -127,7 +129,7 @@ const Techs = () => {
               </div>
               <div className="w-10 opacity-0">
                 <Image 
-                  alt=''
+                  alt='a 3D icon of react - a javascript library'
                   width={undefined}
                   height={undefined}
                   src={react}
@@ -141,7 +143,7 @@ const Techs = () => {
         <div className="shelf absolute top-[9rem] -left-[3.4rem] w-[4.9rem] sm:top-[13.5rem] sm:-left-[8.3rem] sm:w-[10.7rem]">
           <div className="w-10 flex sm:ml-8  items-end">
             <Image 
-              alt=''
+              alt='a 3D icon of CSS3 - used for styling webpages'
               width={undefined}
               height={undefined}
               src={css}
@@ -155,7 +157,7 @@ const Techs = () => {
             <div className="w-10"></div>
             <div className="w-10">
               <Image 
-                alt=''
+                alt='a 3D icon of html'
                 width={undefined}
                 height={undefined}
                 src={html}
