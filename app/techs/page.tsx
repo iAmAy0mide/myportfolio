@@ -1,6 +1,8 @@
-import Navigations from '@/components/Navigations'
+import Navigations from '@/components/Navigations';
+import { Dancing_Script } from "@next/font/google";
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 import html from "/public/html.png";
 import css from "/public/css3.png";
 import ts from "/public/typescript.webp";
@@ -12,11 +14,24 @@ import tailwind from "/public/tailwind.png";
 import express from "/public/express.png";
 import sanity from "/public/sanity.png";
 
+const dancingScript = Dancing_Script({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+});
+
+
 const Techs = () => {
   return (
     <main className='flex justify-center items-center relative h-[80vh] w-screen'>
-      <div className="absolute">
-
+      <div className="absolute top-4 right-4">
+        <p><span className={`font-500 text-underline ${dancingScript.className}`}>Created with: </span><span className='text-underline text-[#ff9900e0] hover:text-[#ff9800] transition-colors duration-500 '>tailwind css</span></p>
+        <p><span className={`font-500 ${dancingScript.className}`}>Inspired by: </span>
+          <Link 
+            href='https://png.pngtree.com/background/20231017/original/pngtree-circular-wall-shelf-design-enhancing-your-room-s-aesthetics-picture-image_5591901.jpg' 
+            target='_blank'
+            className='text-[#00B7FF] hover:text-[#ff9800] transition-colors duration-500 underline hover:no-underline'
+            >pngtree</Link>
+        </p>
       </div>
       <div className="relative w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] mt-10  rounded-full border-[#ECD4EC] border-[0.5rem] bg-bg shelf-container">
         
@@ -123,7 +138,7 @@ const Techs = () => {
           <div className="w-full h-2 bg-[#ECD4EC]"></div>
         </div>
 
-        <div className="shelf absolute top-[9rem] -left-[3.4rem] w-[4.9rem] sm:top-[12.7rem] sm:-left-[8.3rem] sm:w-[10rem]">
+        <div className="shelf absolute top-[9rem] -left-[3.4rem] w-[4.9rem] sm:top-[13.5rem] sm:-left-[8.3rem] sm:w-[10.7rem]">
           <div className="w-10 flex sm:ml-8  items-end">
             <Image 
               alt=''
