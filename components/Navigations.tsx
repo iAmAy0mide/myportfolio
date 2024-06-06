@@ -40,8 +40,8 @@ const Navigations: React.FC<INav> = ({ isModal }) => {
        
         <div>
           <Link 
-          href="/projects" 
-          className={`block text-textColor text-[1.2rem] py-2 hover:px-2 light-up hover:pl-2 transition-all duration-500 ${pathname === "/projects" ? 'inner-shadow' : '' }`}
+          href="/techs/#projects" 
+          className={`block text-textColor text-[1.2rem] py-2 hover:px-2 light-up hover:pl-2 transition-all duration-500 ${pathname === "#projects" ? 'inner-shadow' : '' }`}
           >Projects</Link>
           <div className="h-[2px] w-[5.5rem] bg-textColor"></div>
         </div>
