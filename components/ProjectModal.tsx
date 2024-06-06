@@ -1,9 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import Slider from 'react-slick';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import img from "/public/about.svg"
 import home from "/public/b-home.png";
 import contact from "/public/b-contact.png";
 import nav from "/public/b-nav.jpg";
@@ -43,9 +41,9 @@ const ProjectModal: React.FC<IProjectModal> = ({ isOpen, onRequestClose }) => {
       style={customStyles}
       overlayClassName="overlay"
     >
-        <div className="carousel-container h-[35rem] w-[18rem] bg-slate-300 relative overflow-hidden rounded-3xl z-30">
+        <div className="carousel-container h-[30rem] w-[16rem] bg-slate-300 relative overflow-hidden rounded-3xl z-30">
           {/* <span className="absolute bg-red-700 w-10 h-10 -top-2 z-20 ">X</span> */}
-          <Slider {...settings} className='h-full bg-black overflow-hidden select-none cursor-grabbing'>
+          <Slider {...settings} className='h-full bg-black overflow-hidden select-none cursor-grabbing pb-8'>
             <div className='h-[120%] select-none'>
               <Image 
                 height={undefined} 
