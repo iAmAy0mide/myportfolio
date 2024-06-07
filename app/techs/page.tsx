@@ -1,5 +1,5 @@
 import Navigations from '@/components/Navigations';
-import { Dancing_Script } from "@next/font/google";
+import { Dancing_Script } from "next/font/google";
 import React from 'react';
 import Projects from '@/components/Projects';
 import Image from 'next/image';
@@ -37,7 +37,7 @@ const Techs = () => {
               >pngtree</Link>
           </p>
         </div>
-        <div className="relative w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] mt-[12rem] rounded-full border-[#ECD4EC] border-[0.5rem] bg-bg shelf-container">
+        <div className="relative w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] mt-[12rem] sm:ml-10 rounded-full border-[#ECD4EC] border-[0.5rem] bg-bg shelf-container">
           
           <div className=" absolute -top-[1.5rem] -left-[3.4rem] w-[6rem] sm:-top-4 sm:-left-[8.3rem] sm:w-[12rem]">
             <div className="flex gap-4 sm:pl-6">
