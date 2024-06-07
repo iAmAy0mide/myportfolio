@@ -9,7 +9,7 @@ const Project: React.FC<IProjectData> = ({ alt, logoAlt, src,logoSrc, projectNam
   return (
     <div className='flex flex-col gap-4 smm:flex items-center w-full'>
     
-      <div className="relative project-container w-[18rem] rounded-md flex overflow-hidden transition-all duration-700 shadow-lg">
+      <div className="relative project-container w-full rounded-md flex overflow-hidden transition-all duration-700 shadow-lg">
           <div className="absolute project-logo h-full w-full flex justify-center items-center bg-red-400 transition-all duration-700">
             <Image
               alt='Bashorunolu legal website logo'
