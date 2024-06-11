@@ -14,6 +14,12 @@ import nodejs from "/public/nodejs.png";
 import tailwind from "/public/tailwind.png";
 import express from "/public/express.png";
 import sanity from "/public/sanity.png";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Technologies I use',
+  description: ''
+}
 
 const dancingScript = Dancing_Script({
   weight: ['400', '500', '600', '700'],
