@@ -28,7 +28,7 @@ const Projects = () => {
           description={'This website is a law firm greatest.'}
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 ">
+      <div className="grid grid-cols-2 gap-2 sm:gap-4">
         <Project
           alt='a representative image of Sevlar - a bank mangement web app'
           logoAlt='a representative logo of Sevlar - a bank mangement web app'
