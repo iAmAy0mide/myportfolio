@@ -7,7 +7,7 @@ const Project: React.FC<IProjectData> = ({ alt, logoAlt, src,logoSrc, projectNam
   const [modalIsOpen, setModalIsOpen] = React.useState<boolean>(false);
 
   return (
-    <div className='flex flex-col gap-4 smm:flex items-center w-full'>
+    <div className='flex flex-col gap-4 smm:flex items-center w-full max-w-[20rem]'>
     
       <div className="relative project-container w-full rounded-md flex overflow-hidden transition-all duration-700 shadow-lg">
           <div className="absolute project-logo h-full w-full flex justify-center items-center bg-red-400 transition-all duration-700">
@@ -32,11 +32,11 @@ const Project: React.FC<IProjectData> = ({ alt, logoAlt, src,logoSrc, projectNam
 
         
         <div className="">
-          <h1 className='text-xl font-extrabold'>{projectName}</h1>
-          <p>{description}</p>
+          <h1 className='text-[1.25em] font-extrabold'>{projectName}</h1>
+          <p className='text-[0.7em]'>{description}</p>
           <button 
             onClick={() => setModalIsOpen(true)}
-            className='btn-skeumorphic px-4 py-2 bg-slate-500 relative text-textColor'>
+            className='btn-skeumorphic px-4 mt-2 py-2 bg-slate-500 relative text-textColor'>
             Preview
           </button>
           <ProjectModal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} />

@@ -6,8 +6,8 @@ body {
   background: #29353f;
   color: #FFF5EE;
   min-height: 100vh;
-  position: relative;
-  display: flex;
+  /* position: relative;
+  display: flex; */
   user-select: none;
 }
 .glassy {
@@ -128,6 +128,11 @@ body {
 .stroked-text {
   -webkit-text-stroke: 1px #FFF5EE;
   color: transparent;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, );
 }
 
 .rocket {
