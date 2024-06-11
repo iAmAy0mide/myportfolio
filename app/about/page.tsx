@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import Illustrations from '@/components/Illustrations';
 import Navigations from '@/components/Navigations';
 import AboutIllus from "/public/about.svg";
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: ''
+}
 
 const About = () => {
   return (
