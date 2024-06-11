@@ -17,7 +17,7 @@ const Projects = () => {
               src={proto} 
               logoSrc={Bashorun}
               projectName={'Bashorunolu Legal Website'}
-              description={'This website is a law firm greatest.'}
+              description={'Created for a law firm. With full responsiveness and touch-notched features'}
         />
        <Project
           alt='a representative image of Sevlar - a bank mangement web app'
@@ -25,7 +25,7 @@ const Projects = () => {
           src={proto} 
           logoSrc={Bashorun} 
           projectName={'Bashorunolu Legal Website'} 
-          description={'This website is a law firm greatest.'}
+          description={'Created for a law firm. With full responsiveness and touch-notched features'}
         />
       </div>
       <div className="grid grid-cols-2 gap-2 sm:gap-4">
@@ -35,7 +35,7 @@ const Projects = () => {
           src={proto} 
           logoSrc={Bashorun} 
           projectName={'Bashorunolu Legal Website'} 
-          description={'This website is a law firm greatest.'}
+          description={'Created for a law firm. With full responsiveness and touch-notched features'}
           />
         <Project
             alt='a representative image of Sevlar - a bank mangement web app'
@@ -43,7 +43,7 @@ const Projects = () => {
             src={proto} 
             logoSrc={Bashorun} 
             projectName={'Bashorunolu Legal Website'} 
-            description={'This website is a law firm greatest.'}
+            description={'Created for a law firm. With full responsiveness and touch-notched features.'}
           />
       </div>       
       <Navigations isModal={true} />
