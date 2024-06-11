@@ -183,11 +183,11 @@ body {
 
 
 .shelf-container {
-  box-shadow: inset 1px 1px 3px 18px #ecd4ec4f,
+  box-shadow: inset 1px 1px 3px 24px #ecd4ec4f,
              -2px 3px 3px #121111,
               /* inset -14px -4px 2px  #121111, */
               /* inset 14px 4px 2px  #121111, */
-              inset 0px -2px 0px 12px #121111;
+              inset 0px -2px 0px 18px #121111;
 }
 
 .shelf {
